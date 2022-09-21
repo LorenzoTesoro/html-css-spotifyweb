@@ -1,0 +1,57 @@
+/* #region common rules */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-black:#000000;
+    --clr-darker:#080B12;
+    --clr-dark:#141922;
+    --clr-white:#FFFFFF;
+    --clr-transparent:#666666;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.container-top{
+    height:calc(100vh - 100px);
+}
+.container-bottom{
+    height:100px;
+}
+/* #endregion common rules */
+
+/* #region utilities  */
+.d-flex{
+    display: flex;
+}
+/* #endregion utilities  */
+
+
+/* #region debug */
+.debug .main{
+    background-color: red;
+}
+.debug .container-bottom{
+    background-color: yellow;
+}
+.debug .sidebar{
+    background-color: blue;
+    height:calc(100vh - 100px);
+    width:20%;
+}
+.debug .content{
+    height:calc(100vh - 100px);
+    background-color: aqua;
+    width:80%;
+}
+.debug header{
+    background-color: green;
+    height: 100px;
+}
+/* #endregion debug */
+
+ 
