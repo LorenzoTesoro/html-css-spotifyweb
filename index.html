@@ -6,20 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpotifyWeb</title>
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
+
     <!-- general style -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="debug">
+<body>
     <div class="wrapper">
         <div class="container-top d-flex">
             <div class="sidebar">
-                <nav class="side-nav">
+                <div class="logo d-flex">
+                    <img src="./assets/images/logo-small.svg" alt="">
+                    <span>Spotify</span>
+                </div>
+                <nav class="side-nav-top">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-house"></i>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="#">Cerca</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-swatchbook"></i>
+                            <a href="#">La tua libreria</a>
+                        </li>
+                    </ul>
                 </nav>
+                <nav class="side-nav-bottom"></nav>
             </div>
             <!-- /. sidebar -->
 
