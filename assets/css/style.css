@@ -36,7 +36,7 @@ ul{
 a{
     text-decoration: none;
 }
-.side-nav-top a, .side-nav-top i, .side-nav-bottom .playlist, .side-nav-bottom li.playlist-name, .main-nav li a, .caption, .created-for-user .title-caption,.download-command, .fa-circle-user{
+.side-nav-top a, .side-nav-top i, .side-nav-bottom .playlist, .side-nav-bottom li.playlist-name, .main-nav li a, .caption, .created-for-user .title-caption,.download-command, .fa-circle-user, .most-popular .title-caption{
     color:var(--clr-transparent);
 }
 h2, h3{
@@ -213,19 +213,22 @@ section.recently-played h2{
     padding-top:0.5rem;
 }
 /* /. recently-played section */
-.created-for-user .title{
+.created-for-user .title, .most-popular .title{
     padding-bottom:2rem;
 }
-.created-for-user .title-caption{
+.created-for-user .title-caption, .most-popular .title-caption{
     padding-top:0.5rem;
 }
-.created-for-user .col-2{
+.created-for-user .col-2, .most-popular .col-2{
     padding-right:1rem;
 }
-.created-for-user h3{
+.created-for-user h3, .most-popular h3{
     padding-top:0.8rem;
 }
-/* /. created-for.user section */
+section.most-popular img{
+    border-radius: 50%;
+}
+/* /. created-for-user section, most-popular-section */
 /* #endregion main */
 
 /* PLAYER */
