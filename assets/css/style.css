@@ -36,10 +36,10 @@ ul{
 a{
     text-decoration: none;
 }
-.side-nav-top a, .side-nav-top i, .side-nav-bottom .playlist, .side-nav-bottom li.playlist-name, .main-nav li a, .caption, .created-for-user .title-caption,.download-command, .fa-circle-user, .most-popular .title-caption{
+.side-nav-top a, .side-nav-top i, .side-nav-bottom .playlist, .side-nav-bottom li.playlist-name, .main-nav li a, .caption, .created-for-user .title-caption,.download-command, .fa-circle-user, .most-popular .title-caption, h4+div, .player-left div:last-child{
     color:var(--clr-transparent);
 }
-h2, h3{
+h2, h3, h4{
     color:var(--clr-white);
 }
 h3{
@@ -48,7 +48,7 @@ h3{
 .logo span{
     font-size: 1.3rem;
 }
-.sidebar li,.main-nav li, .caption, .playlist span, header .btn, .title-caption, .download-command{
+.sidebar li,.main-nav li, .caption, .playlist span, header .btn, .title-caption, .download-command, h4, h4+div, .song-lenght div:first-child, .song-lenght div:last-child{
     font-size: 0.75rem;
 }
 /* #endregion common rules */
@@ -59,7 +59,7 @@ h3{
 }
 .container-sm{
     margin:0 auto;
-    width:70%;
+    width:80%;
 }
 .col-2{
     width:calc(100% / 12 *2);
@@ -236,7 +236,58 @@ section.most-popular img{
  /* #region player */
  div.player{
     background-color: var(--clr-player);
+    padding-left: 0.5rem;
+    justify-content: space-between;
  }
+
+ .square{
+    height:40px;
+    width:40px;
+    margin-right: 1rem;
+ }
+ .player-left{
+    align-items: center;
+ }
+ .player-left .player-title{
+    margin-right:2rem;
+ }
+ .fa-heart{
+    margin-right:0.5rem;
+ }
+
+.player-center{
+    color:var(--clr-white);
+    font-size: 1rem;
+}
+.player-command{
+    padding-top:0.5rem;
+    text-align: center;
+}
+.player-command i:not(#play){
+    padding-right:1rem;
+}
+#play{
+    font-size: 1.5rem;
+    padding-right:1.5rem;
+    padding-left:0.5rem;
+}
+.song-lenght div{
+    display: inline-block;
+}
+.song-lenght{
+    margin-top:0.5rem;
+}
+.song-lenght div:first-child{
+    padding-right:1rem;
+}
+.song-lenght div:last-child{
+    padding-left:1rem;
+}
+#player-bar{
+    height:6px;
+    background-color: var(--clr-transparent);
+    width:30vw;
+}
  /* #endregion player */
 
 
