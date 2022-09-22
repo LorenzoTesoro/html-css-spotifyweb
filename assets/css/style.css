@@ -36,7 +36,7 @@ ul{
 a{
     text-decoration: none;
 }
-.side-nav-top a, .side-nav-top i, .side-nav-bottom .playlist, .side-nav-bottom li.playlist-name, .main-nav li a, .caption{
+.side-nav-top a, .side-nav-top i, .side-nav-bottom .playlist, .side-nav-bottom li.playlist-name, .main-nav li a, .caption, .created-for-user .title-caption,.download-command, .fa-circle-user{
     color:var(--clr-transparent);
 }
 h2, h3{
@@ -48,7 +48,7 @@ h3{
 .logo span{
     font-size: 1.3rem;
 }
-.sidebar li,.main-nav li, .caption, .playlist span, header .btn{
+.sidebar li,.main-nav li, .caption, .playlist span, header .btn, .title-caption, .download-command{
     font-size: 0.75rem;
 }
 /* #endregion common rules */
@@ -59,13 +59,16 @@ h3{
 }
 .container-sm{
     margin:0 auto;
-    width:60%;
+    width:70%;
 }
 .col-2{
     width:calc(100% / 12 *2);
 }
 .text-center{
     text-align: center;
+}
+.section-space{
+    padding:1.5rem 1rem 1rem 1.8rem;
 }
 /* #endregion utilities  */
 
@@ -99,7 +102,7 @@ h3{
     padding: 1rem 0 0 1rem;
     width:200px;
     height:100%;
-    overflow-y: auto;
+    position: relative;
 }
 .sidebar img{
     width:30%;
@@ -136,6 +139,21 @@ h3{
 .side-nav-bottom li:first-of-type{
     padding-top: 0.5rem;
 }
+.sidebar .download{
+    position: absolute;
+    bottom:0.5rem;
+}
+.sidebar .download-command{
+    padding-bottom: 1rem;
+}
+.sidebar .user-name{
+    padding-top:1rem;
+    border-top:1px solid var(--clr-transparent);
+}
+.sidebar .download i{
+    padding-right:0.3rem;
+}
+/* /.side-nav-bottom */
  /* #endregion sidebar */
 
 
@@ -181,14 +199,11 @@ main{
 }
 /* /.main-nav */
 
-main section.recently-played{
-    padding:1.5rem 1rem 1.5rem 1.8rem;
-}
 section.recently-played h2{
     padding-bottom:1.5rem;
 }
 .recently-played .col-2{
-    padding-right:0.8rem;
+    padding-right:1rem;
 }
 
 .album-description{
@@ -197,6 +212,20 @@ section.recently-played h2{
 .album-description .caption{
     padding-top:0.5rem;
 }
+/* /. recently-played section */
+.created-for-user .title{
+    padding-bottom:2rem;
+}
+.created-for-user .title-caption{
+    padding-top:0.5rem;
+}
+.created-for-user .col-2{
+    padding-right:1rem;
+}
+.created-for-user h3{
+    padding-top:0.8rem;
+}
+/* /. created-for.user section */
 /* #endregion main */
 
 /* PLAYER */
