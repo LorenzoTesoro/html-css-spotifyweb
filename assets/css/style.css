@@ -27,9 +27,6 @@ ul{
 h3, .btn, .main-menu{
     font-size: 0.8rem;
 }
-.logo span{
-    font-size: 1.3rem;
-}
 .sidebar li,.main-nav li, .caption, .playlist span, header .btn, .title-caption, .download-command, h4, h4+div, .song-lenght div:first-child, .song-lenght div:last-child{
     font-size: 0.7rem;
 }
@@ -110,6 +107,7 @@ h3, .btn, .main-menu{
     flex-direction: column;
     justify-content:space-between;
     color:var(--clr-white);
+    overflow-y: hidden;
 }
 .sidebar-top .logo {
     width: 100px;
@@ -131,6 +129,9 @@ h3, .btn, .main-menu{
 }
 .sidebar-top:not(h4), .sidebar-bottom img, .sidebar-bottom .download-command div, .sidebar-bottom{
     color:var(--clr-transparent);
+}
+.sidebar h4{
+    color: var(--clr-white);
 }
 .sidebar-top .playlist{
     margin-top:1rem;
@@ -233,12 +234,13 @@ section.recently-played h2{
 section.most-popular img{
     border-radius: 50%;
 }
+section.most-popular{
+    padding-bottom:1rem;
+}
 /* /. created-for-user section, most-popular-section */
 /* #endregion main */
 
 /* #endregion content */
-
-/* PLAYER */
 
  /* #region player */
  div.player{
@@ -273,16 +275,16 @@ section.most-popular img{
     font-size: 1rem;
 }
 .player-command{
-    padding-top:0.5rem;
+    padding-top:0.7rem;
     text-align: center;
 }
-.player-command i:not(#play){
+.player-command i:not(#play, #backward){
     padding-right:1rem;
 }
 #play{
     font-size: 1.5rem;
     padding-right:1.5rem;
-    padding-left:0.5rem;
+    padding-left:1.5rem;
 }
 .song-lenght{
     margin-top:0.5rem;
@@ -302,7 +304,9 @@ section.most-popular img{
     height:4px;
     background-color: var(--clr-bar-);
     width:5vw;
+    justify-content: flex-end;
 }
+
 .player-right i{
     color: var(--clr-white);
     font-size: 0.8rem;;
@@ -327,8 +331,70 @@ section.most-popular img{
  /* #endregion player */
 
 
+ /* #region animation */
 
- /* RESPONSIVE */
+.hover-container{
+    position:relative;
+}
+.hover{
+    display:none;
+}
+section .col-2:hover{
+    cursor: pointer;
+}
+section .col-2:hover .hover{
+    display: block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:var(--clr-white);
+    font-size:3rem;
+}
+section .col-2:hover img{
+    opacity:0.4;
+}
+/* /.showing player on albums */
+
+.cta .btn:hover {
+    cursor:pointer;
+    padding: 0.7rem 2.2rem;
+}
+
+/* /.growing button effect  */
+
+.add-playlist:hover, .sidebar li:hover, .content li:hover, .download-command:hover div{
+    cursor:pointer;
+    color:var(--clr-white);
+}
+
+.player-title > div:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.player-left div:last-child i:first-of-type:hover{
+    color:var(--clr-white);
+    cursor:pointer
+}
+.player-left div:last-child i:nth-of-type(2):hover{
+    color:var(--clr-white);
+    cursor:pointer;
+}
+/* /.changing color effect */
+
+.song-lenght:hover .bar-colored, .player-right div:first-of-type:hover{
+    background-color:lightgreen;
+    cursor:pointer;
+}
+
+.player #play:hover{
+    font-size: 1.515rem;
+    cursor: pointer;
+}
+/* #endregion animation */
+
+/* RESPONSIVE */
 
  @media screen and (max-width:877px) {
     .row.d-flex{

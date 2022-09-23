@@ -102,42 +102,60 @@
                         <h2>Recently played</h2>
                         <div class="row d-flex">
                             <div class="col-2 col-md-3 col-sm-6">
-                                <img src="./assets/images/metal_lifting.jpg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/metal_lifting.jpg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <div class="album-description text-center">
                                     <h3>Heavy Metal</h3>
                                     <div class="caption">Subtitle</div>
                                 </div>
                             </div>
                             <div class="col-2 col-md-3 col-sm-6">
-                                <img src="./assets/images/stranger.jpeg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/stranger.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <div class="album-description text-center">
                                     <h3>Stranger Things, Vol.1(a Netflix Original Series Soundtrack)</h3>
                                     <div class="caption">Kyle Dixon & Michael Stein</div>
                                 </div>
                             </div>
                             <div class="col-2 col-md-3 col-sm-6">
-                                <img src="./assets/images/aquietplace.jpeg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/aquietplace.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <div class="album-description text-center">
                                     <h3>A quiet place</h3>
                                     <div class="caption">Subtitle</div>
                                 </div>
                             </div>
                             <div class="col-2 col-md-3 col-sm-6">
-                                <img src="./assets/images/split.jpeg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/split.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <div class="album-description text-center">
                                     <h3>Split</h3>
                                     <div class="caption">Subtitle</div>
                                 </div>
                             </div>
                             <div class="col-2 col-md-3 col-sm-6">
-                                <img src="./assets/images/cure.jpeg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/cure.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <div class="album-description text-center">
                                     <h3>A cure for wellness</h3>
                                     <div class="caption">Subtitle</div>
                                 </div>
                             </div>
                             <div class="col-2 col-md-3 col-sm-6">
-                                <img src="./assets/images/sinister.jpeg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/sinister.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <div class="album-description text-center">
                                     <h3>Sinister</h3>
                                     <div class="caption">Subtitle</div>
@@ -154,11 +172,17 @@
                         </div>
                         <div class="row d-flex">
                             <div class="col-2 col-md-3 col-sm-6 daily-mix text-center">
-                                <img src="./assets/images/radar.jpeg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/radar.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <h3>Release Radar</h3>
                             </div>
                             <div class="col-2 col-md-3 col-sm-6 daily-mix text-center">
-                                <img src="./assets/images/mixdaily.jpeg" alt="">
+                                <div class="hover-container">
+                                     <img src="./assets/images/mixdaily.jpeg" alt="">
+                                     <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <h3>Daily Mix 1</h3>
                             </div>
                         </div>
@@ -172,11 +196,17 @@
                         </div>
                         <div class="row d-flex">
                             <div class="col-2 col-md-3 col-sm-6 daily-mix text-center">
-                                <img src="./assets/images/youg.jpeg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/youg.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <h3>Lana del Rey</h3>
                             </div>
                             <div class="col-2 col-md-3 col-sm-6 daily-mix text-center">
-                                <img src="./assets/images/einaudi.jpeg" alt="">
+                                <div class="hover-container">
+                                    <img src="./assets/images/einaudi.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play hover"></i>
+                                </div>
                                 <h3>Ludovico Einaudi</h3>
                             </div>
                         </div>
@@ -206,14 +236,15 @@
             <div class="player-center">
                 <div class="player-command">
                     <i class="fa-solid fa-shuffle"></i>
-                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-backward-step" id="backward"></i>
                     <i class="fa-regular fa-circle-play" id="play"></i>
                     <i class="fa-solid fa-forward-step"></i>
                     <i class="fa-solid fa-rotate-right"></i>
                 </div>
                 <div class="song-lenght d-flex">
                     <div>0:25</div>
-                    <div class="bar-colored"></div>
+                    <div class="bar-colored">
+                    </div>
                     <div class="bar-uncolored"></div>
                     <div>0:45</div>
                 </div>
