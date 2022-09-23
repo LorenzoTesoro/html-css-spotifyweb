@@ -14,6 +14,8 @@ body{
     --clr-white:#FFFFFF;
     --clr-transparent:#a3a2a2;
     --clr-player:#282828;
+    --clr-bar-:#C1C1C1;
+    --clr-bar-light:#5A5A5A;
 }
 img{
     max-width: 100%;
@@ -29,7 +31,7 @@ h3, .btn, .main-menu{
     font-size: 1.3rem;
 }
 .sidebar li,.main-nav li, .caption, .playlist span, header .btn, .title-caption, .download-command, h4, h4+div, .song-lenght div:first-child, .song-lenght div:last-child{
-    font-size: 0.75rem;
+    font-size: 0.7rem;
 }
 /* #endregion common rules */
 
@@ -69,7 +71,7 @@ h3, .btn, .main-menu{
     text-align: center;
 }
 .section-space{
-    padding:1.5rem 1rem 1rem 1.8rem;
+    padding:1.5rem 1rem 0 1.5rem;
 }
 .uppercase{
     text-transform: uppercase;
@@ -116,7 +118,7 @@ h3, .btn, .main-menu{
     display: none;
 }
 .sidebar-top .menu img, .sidebar-bottom img{
-    width:25px;
+    width:20px;
 }
 .sidebar-top .menu li, .sidebar-bottom .d-flex{
     align-items: center;
@@ -185,6 +187,12 @@ h3, .btn, .main-menu{
 main{
     background-color: var(--clr-dark);
 }
+main h2, main h3{
+    color:var(--clr-white);
+}
+main .caption, .title-caption, .title{
+    color:var(--clr-transparent);
+}
 .main-menu ul.d-flex{
     justify-content: center;
     padding: 1rem 0 1rem 0;
@@ -196,14 +204,12 @@ main{
     padding-right:0.5rem;
     padding-left:0.5rem;
 }
-
 section.recently-played h2{
     padding-bottom:1.5rem;
 }
 .recently-played .col-2{
     padding-right:1rem;
 }
-
 .album-description{
     padding-top:0.7rem;
 }
@@ -211,6 +217,7 @@ section.recently-played h2{
     padding-top:0.5rem;
 }
 /* /. recently-played section */
+
 .created-for-user .title, .most-popular .title{
     padding-bottom:2rem;
 }
@@ -237,15 +244,21 @@ section.most-popular img{
  div.player{
     background-color: var(--clr-player);
     padding-left: 0.5rem;
+    padding-right: 0.5rem;
     justify-content: space-between;
  }
-
- .square{
-    height:40px;
-    width:40px;
-    margin-right: 1rem;
+ .player h4{
+    color:var(--clr-white);
  }
- .player-left{
+ .player h4+div, .player-left i{
+    color:var(--clr-transparent);
+ }
+ .square{
+    height:30px;
+    width:30px;
+    margin-right: 0.5rem;
+ }
+ .player-left, .song-lenght{
     align-items: center;
  }
  .player-left .player-title{
@@ -271,9 +284,6 @@ section.most-popular img{
     padding-right:1.5rem;
     padding-left:0.5rem;
 }
-.song-lenght div{
-    display: inline-block;
-}
 .song-lenght{
     margin-top:0.5rem;
 }
@@ -283,26 +293,36 @@ section.most-popular img{
 .song-lenght div:last-child{
     padding-left:1rem;
 }
-#player-bar{
-    height:6px;
-    background-color: var(--clr-transparent);
+.bar-uncolored{
+    height:4px;
+    background-color: var(--clr-bar-light);
     width:20vw;
+}
+.bar-colored{
+    height:4px;
+    background-color: var(--clr-bar-);
+    width:5vw;
 }
 .player-right i{
     color: var(--clr-white);
+    font-size: 0.8rem;;
+}
+.player-right i+div{
+    height:4px;
+    background-color: var(--clr-bar-);
+    width:2vw;
 }
 .player-right div:last-child{
-    height:6px;
-    background-color: var(--clr-transparent);
+    height:4px;
+    background-color: var(--clr-bar-light);
     width:10vw;
-    margin-right:0.7rem;
     padding-left:0.7rem;
 }
 .player-right{
     align-items: center;
 }
 .player-right i{
-    padding-right:0.5rem;
+    padding-right:1rem;
 }
  /* #endregion player */
 
@@ -310,26 +330,33 @@ section.most-popular img{
 
  /* RESPONSIVE */
 
- @media screen and (max-width:878px) {
+ @media screen and (max-width:877px) {
     .row.d-flex{
         flex-wrap: wrap;
     }
     .col-md-3{
         width:calc(100% / 12 * 3);
     }
+    section.recently-played .row{
+        row-gap:1.5rem;
+    }
     
  }
 
- @media screen and (max-width:639px) {
+ @media screen and (max-width:638px) {
     .col-sm-6{
         width:calc(50%);
     }
     .main-menu .container-sm{
         width:90%;
     }
+    .player-left i{
+        display: block;
+        padding-bottom: 0.3rem;
+    }
 }
 
-@media screen and (max-width:552px) {
+@media screen and (max-width:551px) {
     #logo-big, .sidebar .playlist, .sidebar-top .menu li > div, .sidebar-bottom span, .sidebar-bottom hr, .sidebar-bottom img+div {
         display: none;
     }
@@ -349,5 +376,8 @@ section.most-popular img{
     }
     .user-name{
         padding-top:0.5rem;
+    }
+    .player-right div:last-child, .player-right i+div{
+        display: none;
     }
 }
