@@ -4,18 +4,16 @@
     padding:0;
     box-sizing: border-box;
 }
-
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 :root{
     --clr-black:#000000;
     --clr-darker:#080B12;
     --clr-dark:#141922;
     --clr-white:#FFFFFF;
-    --clr-transparent:#666666;
+    --clr-transparent:#a3a2a2;
     --clr-player:#282828;
-}
-
-body{
-    font-family: 'Montserrat', sans-serif;
 }
 img{
     max-width: 100%;
@@ -32,15 +30,6 @@ img{
 }
 ul{
     list-style: none;
-}
-a{
-    text-decoration: none;
-}
-.side-nav-top a, .side-nav-top i, .side-nav-bottom .playlist, .side-nav-bottom li.playlist-name, .main-nav li a, .caption, .created-for-user .title-caption,.download-command, .fa-circle-user, .most-popular .title-caption, h4+div, .player-left div:last-child{
-    color:var(--clr-transparent);
-}
-h2, h3, h4{
-    color:var(--clr-white);
 }
 h3{
     font-size: 1rem;
@@ -64,11 +53,17 @@ h3{
 .col-2{
     width:calc(100% / 12 *2);
 }
+.col-4{
+    width:calc(100% / 12 *4);
+}
 .text-center{
     text-align: center;
 }
 .section-space{
     padding:1.5rem 1rem 1rem 1.8rem;
+}
+.uppercase{
+    text-transform: uppercase;
 }
 /* #endregion utilities  */
 
@@ -98,62 +93,64 @@ h3{
  /* #region sidebar */
 .sidebar{
     background-color: var(--clr-black);
-    color:var(--clr-white);
-    padding: 1rem 0 0 1rem;
+    padding: 0 1rem;
     width:200px;
     height:100%;
-    position: relative;
+    flex-direction: column;
+    justify-content:space-between;
+    color:var(--clr-white);
 }
-.sidebar img{
-    width:30%;
+.sidebar-top .logo {
+    width: 100px;
 }
-.sidebar .logo{
-   align-items: center;
+#logo-small{
+    display: none;
 }
-.sidebar .logo span{
-    padding-left: 0.5rem;
+.sidebar-top .menu img, .sidebar-bottom img{
+    width:25px;
 }
-.side-nav-top a{
-    padding-left: 0.5rem;
-}
-.side-nav-top li, .side-nav-bottom li{
-    padding-bottom:0.7rem
-}
-.side-nav-top, .sidebar .logo{
-    padding-bottom: 2rem;
-}
-/* /.side-nav-top */
-
-.playlist{
+.sidebar-top .menu li, .sidebar-bottom .d-flex{
     align-items: center;
 }
-.playlist span{
+.sidebar-top .menu li > div, .sidebar-bottom .download-command > div, .sidebar-bottom .user-name > div{
     padding-left: 0.5rem;
+}
+.sidebar-top li{
+    padding-bottom:0.7rem
+}
+.sidebar-top:not(h4), .sidebar-bottom img, .sidebar-bottom .download-command div, .sidebar-bottom{
+    color:var(--clr-transparent);
+}
+.sidebar-top .playlist{
+    margin-top:1rem;
+}
+.add-playlist{
+    align-items: center;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+}
+.add-playlist > div{
+    padding-left:0.5rem;
 }
 .playlist i{
     font-size: 2rem;
 }
-.side-nav-bottom h4{
-    padding-bottom:1rem;
+.sidebar-bottom{
+    margin-bottom:0.5rem;
 }
-.side-nav-bottom li:first-of-type{
-    padding-top: 0.5rem;
+.sidebar-bottom hr{
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+    border:1px solid var(--clr-transparent);
+    width:100%;
 }
-.sidebar .download{
-    position: absolute;
-    bottom:0.5rem;
+#profile{
+    background-color: var(--clr-transparent);
+    border-radius: 1rem;
 }
-.sidebar .download-command{
-    padding-bottom: 1rem;
+#download{
+    width:20px;
 }
-.sidebar .user-name{
-    padding-top:1rem;
-    border-top:1px solid var(--clr-transparent);
-}
-.sidebar .download i{
-    padding-right:0.3rem;
-}
-/* /.side-nav-bottom */
  /* #endregion sidebar */
 
 
@@ -286,7 +283,23 @@ section.most-popular img{
 #player-bar{
     height:6px;
     background-color: var(--clr-transparent);
-    width:30vw;
+    width:20vw;
+}
+.player-right i{
+    color: var(--clr-white);
+}
+.player-right div:last-child{
+    height:6px;
+    background-color: var(--clr-transparent);
+    width:10vw;
+    margin-right:0.7rem;
+    padding-left:0.7rem;
+}
+.player-right{
+    align-items: center;
+}
+.player-right i{
+    padding-right:0.5rem;
 }
  /* #endregion player */
 
@@ -294,7 +307,7 @@ section.most-popular img{
 
  /* RESPONSIVE */
 
- @media screen and (max-width:877px) {
+ @media screen and (max-width:878px) {
     .row.d-flex{
         flex-wrap: wrap;
     }
@@ -304,8 +317,31 @@ section.most-popular img{
     
  }
 
- @media screen and (max-width:638px) {
+ @media screen and (max-width:639px) {
     .col-sm-6{
         width:calc(50%);
+    }
+}
+
+@media screen and (max-width:552px) {
+    #logo-big, .sidebar .playlist, .sidebar-top .menu li > div, .sidebar-bottom span, .sidebar-bottom hr, .sidebar-bottom img+div {
+        display: none;
+    }
+    .sidebar{
+        width:55px;
+    }
+    .sidebar .logo{
+        width: 100%;
+    }
+    #logo-small{
+        display: block;
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    .download-command{
+        padding-bottom:0.5rem;
+    }
+    .user-name{
+        padding-top:0.5rem;
     }
 }

@@ -8,6 +8,7 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,54 +18,60 @@
     <!-- general style -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
+<body> 
+
     <div class="wrapper">
         <div class="container-top d-flex">
-            <div class="sidebar">
-                <div class="logo d-flex">
-                    <img src="./assets/images/logo-small.svg" alt="">
-                    <span>Spotify</span>
-                </div>
-                <nav class="side-nav-top">
-                    <ul>
-                        <li>
-                            <i class="fa-solid fa-house"></i>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <a href="#">Cerca</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-swatchbook"></i>
-                            <a href="#">La tua libreria</a>
-                        </li>
-                    </ul>
-                </nav>
-                <nav class="side-nav-bottom">
-                    <h4>PLAYLIST</h4>
-                    <div class="playlist d-flex">
-                        <i class="fa-solid fa-square-plus"></i>
-                        <span>Crea Playlist</span>
+            <div class="sidebar d-flex">
+                <div class="sidebar-top">
+                    <div class="logo">
+                        <img src="./assets/images/logo.svg" alt="" id="logo-big">
+                        <img src="./assets/images/logo-small.svg" alt="" id="logo-small">
                     </div>
-                    <ul>
-                        <li class="playlist-name">Name Playlist</li>
-                        <li class="playlist-name">Name Playlist</li>
-                        <li class="playlist-name">Name Playlist</li>
-                        <li class="playlist-name">Name Playlist</li>
-                        <li class="playlist-name">Name Playlist</li>
-                        <li class="playlist-name">Name Playlist</li>
-                        <li class="playlist-name">Name Playlist</li>
-                    </ul>
-                </nav>
-                <div class="download">
-                    <div class="download-command">
-                        <i class="fa-solid fa-circle-arrow-down"></i>
-                        <span>Installa App</span>
+                    <div>
+                        <ul class="menu">
+                            <li class="d-flex">
+                                <img src="./assets/images/home.svg" alt="">
+                                <div>Home</div>
+                            </li class="d-flex">
+                            <li class="d-flex">
+                                <img src="./assets/images/search.svg" alt="">
+                                <div>Cerca</div>
+                            </li class="d-flex">
+                            <li class="d-flex">
+                                <img src="./assets/images/libreria.svg" alt="">
+                                <div>La tua libreria</div>
+                            </li class="d-flex">
+                        </ul>
+                    </div>
+                    <div class="playlist">
+                        <h4 class="uppercase">PLAYLIST</h4>
+                        <div class="add-playlist d-flex">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <div>Crea Playlist</div>
+                        </div>
+                        <ul class="playlist-name">
+                            <li class="playlist-name">Nome Playlist</li>
+                            <li class="playlist-name">Nome Playlist</li>
+                            <li class="playlist-name">Nome Playlist</li>
+                            <li class="playlist-name">Nome Playlist</li>
+                            <li class="playlist-name">Nome Playlist</li>
+                            <li class="playlist-name">Nome Playlist</li>
+                            <li class="playlist-name">Nome Playlist</li>
+                        </ul>
+                    </div>
+                </div>
+                    <!-- /.sidebar top -->
+
+                <div class="sidebar-bottom">
+                    <div class="download-command d-flex">
+                        <img src="./assets/images/download.svg" alt="" id="download">
+                        <div>Installa App</div>
                     </div>  
-                    <div class="user-name">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <span>John Doe</span>
+                    <hr>
+                    <div class="user-name d-flex">
+                        <img src="./assets/images/profile.svg" alt="" id="profile">
+                        <div>John Doe</div>
                     </div>
                 </div>
             </div>
@@ -123,7 +130,7 @@
                                 </div>
                             </div>
                             <div class="col-2 col-md-3 col-sm-6">
-                                <img src="./assets/images/metal_lifting.jpg" alt="">
+                                <img src="./assets/images/cure.jpeg" alt="">
                                 <div class="album-description text-center">
                                     <h3>A cure for wellness</h3>
                                     <div class="caption">Subtitle</div>
@@ -183,7 +190,7 @@
         <!-- /.container-top -->
 
         <div class="player d-flex">
-            <div class="player-left d-flex">
+            <div class="col-4 player-left d-flex">
                 <div class="square">
                     <img src="./assets/images/sinister.jpeg" alt="">
                 </div>
@@ -196,7 +203,7 @@
                     <i class="fa-regular fa-folder"></i>
                 </div>
             </div>
-            <div class="player-center">
+            <div class="col-4 player-center">
                 <div class="player-command">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
@@ -210,7 +217,7 @@
                     <div>0:45</div>
                 </div>
             </div>
-            <div class="col-4 player-right">
+            <div class="col-4 player-right d-flex">
                 <i class="fa-solid fa-display"></i>
                 <i class="fa-solid fa-volume-high"></i>
                 <div></div>
